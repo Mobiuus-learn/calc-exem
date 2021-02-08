@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main" data-tilt>
+    <form class="form" name="calc">
+        <input class="visor"  name=text>
+    
+        <span class="num clear"  onclick="calc.text.value = ''" >C</span class="num">
+        <span class="num" onclick="document.calc.text.value +='/' " >/</span class="num">
+        <span class="num" onclick="document.calc.text.value +='*' " >*</span class="num">
+        <span class="num" onclick="document.calc.text.value +='7' " >7</span class="num">
+        <span class="num" onclick="document.calc.text.value +='8' " >8</span class="num">
+        <span class="num" onclick="document.calc.text.value +='9' " >9</span class="num">
+        <span class="num" onclick="document.calc.text.value +='-' " >-</span class="num">
+        <span class="num" onclick="document.calc.text.value +='4' " >4</span class="num">
+        <span class="num" onclick="document.calc.text.value +='5' " >5</span class="num">
+        <span class="num" onclick="document.calc.text.value +='6' " >6</span class="num">
+        <span class="num" onclick="document.calc.text.value +='+' " >+</span class="num">
+        <span class="num" onclick="document.calc.text.value +='1' " >1</span class="num">
+        <span class="num" onclick="document.calc.text.value +='2' " >2</span class="num">
+        <span class="num" onclick="document.calc.text.value +='3' " >3</span class="num">
+        <span class="num" onclick="document.calc.text.value +='0' " >0</span class="num">
+        <span class="num" onclick="document.calc.text.value +='00' " >00</span class="num">
+        <span class="num" onclick="document.calc.text.value +='.' " >.</span class="num">
+        <span class="num equal" class="equal" onclick="document.calc.text.value = eval(calc.text.value)" >=</span>
+    </form>
+</div>    
+
+
+
+
+    <!-- <script src="calc.js"></script> -->
+    <script type="text/javascript" src="vanilla-tilt.min.js"></script>
+        <script type="text/javascript">
+                VanillaTilt.init(document.querySelector(".main"),{
+                    max: 15,
+                    speed: 400,
+                    glare: true,
+                    "max-glare":1,
+                    gyroscope: true,      
+                    perspective:1000,               
+
+                });
+        </script>       
+</body>
+</html>

@@ -1,0 +1,70 @@
+*{
+    margin:0;
+    padding: 0;
+    outline: none;
+    user-select: none;
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root{
+    --font:'Open Sans', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #161d6f;
+}
+
+.main{
+    position: relative;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    overflow: hidden;
+    top: 50%;
+    /* glass */
+    background: rgba( 255, 255, 255, 0.40 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    position: relative;
+}
+.form{
+    position: relative;
+    display: grid;
+}
+.form .visor{
+    grid-column: span 4;
+    width: 300px;
+    height: 80px;
+    background: transparent;
+    border: none;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    text-align: right;
+    font-size: 26pt;
+    color: white;
+    font-family: var(--font);
+}
+.form span{
+    display: grid;
+    height: 75px;
+    color: white;
+    place-items: center;
+    cursor: pointer;
+    font-size: 18pt;
+    font-family: var(--font);
+}
+.form span:hover{
+    background: rgba(9, 233, 65, 0.885);
+}
+.form .span:active{
+    background: rgba(1, 97, 25, 0.946);
+}
+.clear{
+   grid-column: span 2;
+}
+.equal{
+    grid-column: span 2;
+}
